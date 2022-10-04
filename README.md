@@ -4,6 +4,7 @@
 
 - Install [sdkMan](https://sdkman.io/)
 - Install [Insomnia](https://insomnia.rest/)
+- Install [NodeJS]()
 
 ```bash
 sdk install java
@@ -26,5 +27,9 @@ open http://localhost:8080/greetings # - OR - alternatively import OAS into inso
 ## Linting
 
 ### Local
+
+```bash
+npx spectral lint src/main/resources/oas3.yaml
+```
 
 ### CI (github actions)
