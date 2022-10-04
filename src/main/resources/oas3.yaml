@@ -231,6 +231,7 @@ components:
       required:
         - message
         - isFriendly
+        - label
       properties:
         id:
           description: Id
