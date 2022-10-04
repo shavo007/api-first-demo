@@ -1,10 +1,11 @@
 # Showcase api first and open api generator
 
-## Pre-requisistes
+## Pre-requisites
 
 - Install [sdkMan](https://sdkman.io/)
 - Install [Insomnia](https://insomnia.rest/)
-- Install [NodeJS]()
+- Install [NodeJS](https://nodejs.org/en/download/)
+- Install [Docker](https://docs.docker.com/desktop/install/mac-install/)
 
 ```bash
 sdk install java
