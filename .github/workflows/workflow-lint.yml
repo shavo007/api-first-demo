@@ -11,8 +11,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-go@v3.3.0
       - name: Run actionlint on workflow files
-        run: |
-          go install github.com/rhysd/actionlint/cmd/actionlint@latest
-          actionlint
+        run: docker run --rm -v "$PWD:/repo" --workdir /repo rhysd/actionlint:latest -color
