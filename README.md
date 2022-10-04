@@ -26,6 +26,8 @@ open http://localhost:8080/greetings # - OR - alternatively import OAS into inso
 
 ## Linting
 
+Using [Spectral](https://meta.stoplight.io/docs/spectral/674b27b261c3c-overview)
+
 ### Local
 
 ```bash
