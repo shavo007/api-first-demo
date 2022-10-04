@@ -31,7 +31,7 @@ Using [Spectral](https://meta.stoplight.io/docs/spectral/674b27b261c3c-overview)
 ### Local
 
 ```bash
-npx spectral lint src/main/resources/oas3.yaml
+npx spectral lint src/main/resources/oas3.yaml --ruleset greetings.spectral.yml
 ```
 
 ### CI (github actions)
