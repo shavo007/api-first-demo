@@ -9,12 +9,17 @@ updates:
     directory: "/" # Location of package manifests
     schedule:
       interval: "monthly"
+      time: "09:30"
+      timezone: "Australia/Melbourne"
     labels:
       - "maven"
       - "dependencies"
     ignore:
       - dependency-name: "org.testcontainers:testcontainers-bom"
+    open-pull-requests-limit: 5  
   - package-ecosystem: "github-actions"
     directory: "/"
     schedule:
       interval: "weekly"
+      time: "09:30"
+      timezone: "Australia/Melbourne"
