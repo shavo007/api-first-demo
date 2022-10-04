@@ -15,11 +15,12 @@ jobs:
         if: github.event.action == 'opened'
         with:
           repo-token: ${{ secrets.GITHUB_TOKEN }}
-          issue-message: Thanks for opening your first issue!
+          issue-message: |
+            Welcome @${{github.actor}} :wave: Thanks for opening your first issue!
           pr-message: |
-            # Welcome!
+            # Welcome @${{github.actor}} :wave: !
 
-            Thank you for opening your first pull request! 🎉 Please ensure you have read the full `CONTRIBUTING.md` guide before continuing.
+            Thank you for opening your first pull request! :tada Please ensure you have read the full `CONTRIBUTING.md` guide before continuing.
 
             ## What's next?
 
@@ -35,4 +36,4 @@ jobs:
 
             In roughly ~5 minutes your changes will deployed to production
 
-            That's all! Thanks for contributing!
+            That's all! Thanks for contributing! :smiley:

@@ -38,3 +38,10 @@ npx spectral lint src/main/resources/oas3.yaml --ruleset greetings.spectral.yml
 ```
 
 ### CI (github actions)
+
+#### Workflow linting
+
+```bash
+brew install actionlint
+actionlint
+```
