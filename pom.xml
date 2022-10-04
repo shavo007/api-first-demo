@@ -16,7 +16,7 @@
   <properties>
     <java.version>17</java.version>
     <testcontainers.version>1.17.4</testcontainers.version>
-    <jackson-databind-nullable-version>0.2.0</jackson-databind-nullable-version>
+    <jackson-databind-nullable-version>0.2.3</jackson-databind-nullable-version>
     <!-- <springfox-version>3.0.0</springfox-version> -->
     <swagger-core-version>2.1.12</swagger-core-version>
   </properties>
