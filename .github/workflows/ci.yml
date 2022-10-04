@@ -9,6 +9,10 @@ on:
   pull_request:
     branches: [ "main" ]
 
+concurrency:
+  group: ${{ github.ref }}
+  cancel-in-progress: true    
+
 jobs:
   build:
 
@@ -29,3 +33,12 @@ jobs:
       with:
           spectral_ruleset: 'greetings.spectral.yml'
           file_glob: 'src/main/resources/oas3.yaml'
+    - name: Detect API breaking changes
+      uses: Tufin/oasdiff-action@v2
+      with:
+          base: 'https://raw.githubusercontent.com/shavo007/api-first-demo/main/src/main/resources/oas3.yaml'
+          revision: 'src/main/resources/oas3.yaml'
+          format: 'text'
+          breaking-only: true
+          fail-on-diff: true
+

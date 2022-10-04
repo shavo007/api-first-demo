@@ -24,6 +24,15 @@ open http://localhost:8080/greetings # - OR - alternatively import OAS into inso
 
 ## Test for breaking changes
 
+### Local
+
+```bash
+docker run --rm -t -v $(pwd):/data:ro tufin/oasdiff -format text -base /data/src/main/resources/oas3.yaml  -revision /data/src/main/resources/oas3.yaml
+#- OR -
+oasdiff -format text -base https://raw.githubusercontent.com/shavo007/api-first-demo/main/src/main/resources/oas3.yaml -revision src/main/resources/oas3.yaml
+#https://raw.githubusercontent.com/shavo007/api-first-demo/main/src/main/resources/oas3.yaml
+```
+
 ## Linting
 
 Using [Spectral](https://meta.stoplight.io/docs/spectral/674b27b261c3c-overview)
@@ -31,7 +40,9 @@ Using [Spectral](https://meta.stoplight.io/docs/spectral/674b27b261c3c-overview)
 ### Local
 
 ```bash
-npx spectral lint src/main/resources/oas3.yaml --ruleset greetings.spectral.yml
+npx @stoplight/spectral-cli lint src/main/resources/oas3.yaml --ruleset greetings.spectral.yml
 ```
 
 ### CI (github actions)
+
+Linting is incorporated into the build pipeline. See [ci.yml](.github/workflows/ci.yml)
