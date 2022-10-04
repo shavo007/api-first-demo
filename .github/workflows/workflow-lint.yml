@@ -11,8 +11,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
-      - uses: actions/setup-go@v3
+      - uses: actions/setup-go@v3.3.0
       - name: Install actionlint
         run: go install github.com/rhysd/actionlint/cmd/actionlint@latest
       - name: Run actionlint on workflow files
-        run: actionlint -shellcheck=
+        run: actionlint
