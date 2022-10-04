@@ -1,5 +1,7 @@
 # Showcase api first and open api generator
 
+[![Java CI with Maven](https://github.com/shavo007/api-first-demo/actions/workflows/ci.yml/badge.svg)](https://github.com/shavo007/api-first-demo/actions/workflows/ci.yml)
+
 ## Pre-requisites
 
 - Install [sdkMan](https://sdkman.io/)
