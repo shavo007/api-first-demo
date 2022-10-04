@@ -1,12 +1,12 @@
 name: review
-on:
-  pull_request:
-  workflow_call:
+on: [pull_request, issues]
+
 
 jobs:
   first-interaction:
     permissions:
       pull-requests: write
+      issues: write
     name: runner / first-interaction
     runs-on: ubuntu-latest
     steps:
