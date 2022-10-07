@@ -1,4 +1,4 @@
-# Showcase api first and open api generator
+# Showcase api first and open api generator :fire:
 
 [![Java CI with Maven](https://github.com/shavo007/api-first-demo/actions/workflows/ci.yml/badge.svg)](https://github.com/shavo007/api-first-demo/actions/workflows/ci.yml)
 [![Workflow Linting](https://github.com/shavo007/api-first-demo/actions/workflows/workflow-lint.yml/badge.svg)](https://github.com/shavo007/api-first-demo/actions/workflows/workflow-lint.yml)
