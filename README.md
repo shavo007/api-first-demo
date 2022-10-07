@@ -46,3 +46,5 @@ npx spectral lint src/main/resources/oas3.yaml --ruleset greetings.spectral.yml
 brew install actionlint
 actionlint
 ```
+
+#### Testing first time contributor pr
