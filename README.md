@@ -2,6 +2,7 @@
 
 [![Java CI with Maven](https://github.com/shavo007/api-first-demo/actions/workflows/ci.yml/badge.svg)](https://github.com/shavo007/api-first-demo/actions/workflows/ci.yml)
 [![Workflow Linting](https://github.com/shavo007/api-first-demo/actions/workflows/workflow-lint.yml/badge.svg)](https://github.com/shavo007/api-first-demo/actions/workflows/workflow-lint.yml)
+[![review](https://github.com/shavo007/api-first-demo/actions/workflows/review.yml/badge.svg)](https://github.com/shavo007/api-first-demo/actions/workflows/review.yml)
 
 ## Pre-requisites
 
