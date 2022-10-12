@@ -23,3 +23,12 @@ updates:
       interval: "weekly"
       time: "09:30"
       timezone: "Australia/Melbourne"
+  # Enable version updates for Docker
+  - package-ecosystem: "docker"
+    # Look for a `Dockerfile` in the `root` directory
+    directory: "/"
+    # Check for updates once a week
+    schedule:
+      interval: "weekly"
+      time: "09:30"
+      timezone: "Australia/Melbourne"         
