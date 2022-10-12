@@ -20,7 +20,7 @@ jobs:
           pr-message: |
             # Welcome @${{github.actor}} :wave: !
 
-            Thank you for opening your first pull request! :tada Please ensure you have read the full `CONTRIBUTING.md` guide before continuing.
+            Thank you for opening your first pull request! :tada: Please ensure you have read the full `CONTRIBUTING.md` guide before continuing.
 
             ## What's next?
 

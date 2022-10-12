@@ -1,0 +1,13 @@
+
+# Add 'test' label to any change to java test files within the source dir
+test:
+- src/test/java/**/*
+
+# Add 'source' label to any change to src files within the source dir EXCEPT for the docs sub-folder
+service/greetings:
+- any: ['src/main/java/*', '!src/main/resources/*']
+
+# Add 'frontend` label to any change to *.js files as long as the `main.js` hasn't changed
+# frontend:
+# - any: ['src/**/*.js']
+  # all: ['!src/main.js']
