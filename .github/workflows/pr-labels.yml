@@ -22,7 +22,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Apply needs-triage Label
         uses: actions/labeler@v4.0.2
-        if: github.event.action == 'opened' && env.IN_MAINTAINER_LIST == 'false'
+        if: github.event.action == 'opened' && env.IN_MAINTAINER_LIST == 'false' && github.actor != 'dependabot[bot]'
         with:
           configuration-path: .github/labeler-pr-needs-triage.yml
           repo-token: ${{ secrets.GITHUB_TOKEN }}
