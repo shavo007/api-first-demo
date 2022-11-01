@@ -29,7 +29,7 @@ jobs:
 
       - name: Run Checkov action
         id: checkov
-        uses: bridgecrewio/checkov-action@8854a293338850394866258f1386707c5761b9a5
+        uses: bridgecrewio/checkov-action@2.2.15
         with:
           directory: test-infra/
           # file: example/tfplan.json # optional: provide the path for resource to be scanned. This will override the directory if both are provided.
