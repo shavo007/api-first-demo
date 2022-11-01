@@ -31,4 +31,13 @@ updates:
     schedule:
       interval: "weekly"
       time: "09:30"
-      timezone: "Australia/Melbourne"         
+      timezone: "Australia/Melbourne"
+  # Enable version updates for Docker
+  - package-ecosystem: "terraform"
+    # Look for a `Dockerfile` in the `root` directory
+    directory: "/test-infra"
+    # Check for updates once a week
+    schedule:
+      interval: "monthly"
+      time: "09:30"
+      timezone: "Australia/Melbourne"      
