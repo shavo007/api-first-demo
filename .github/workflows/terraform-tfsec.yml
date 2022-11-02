@@ -1,5 +1,8 @@
 name: tfsec
-on: [pull_request]
+on:
+  pull_request:
+    paths:
+      - '**.tf'
 jobs:
   tfsec:
     name: runner / tfsec
