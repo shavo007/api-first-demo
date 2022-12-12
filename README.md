@@ -51,6 +51,7 @@ actionlint
 #### Checkov
 
 - docker file [policies](https://www.checkov.io/5.Policy%20Index/dockerfile.html)
+- [suppressions](https://www.checkov.io/2.Basics/Suppressing%20and%20Skipping%20Policies.html)
 
 #### Finding commit sha (security hardening for actions)
 
