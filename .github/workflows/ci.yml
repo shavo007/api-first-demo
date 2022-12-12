@@ -78,7 +78,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          platforms: linux/amd64,linux/arm64 # also support the new mac architecture (requires buildx)
+          platforms: linux/amd64 # also support the new mac architecture (requires buildx)
           # push: true
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta_dockerhub.outputs.tags }}
