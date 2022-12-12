@@ -29,3 +29,12 @@ jobs:
       with:
           spectral_ruleset: 'greetings.spectral.yml'
           file_glob: 'src/main/resources/oas3.yaml'
+    - name: Lint Dockerfile using Checkov
+      id: checkov
+      uses: bridgecrewio/checkov-action@v12.1810.0
+      with:
+        directory: .
+        framework: dockerfile # only ask for dockerfile scans
+        quiet: true # show only failed checks
+        container_user: 1000 # UID to run the container under to prevent permission issues
+        output_format: github_failed_only

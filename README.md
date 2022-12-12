@@ -36,6 +36,7 @@ Using [Spectral](https://meta.stoplight.io/docs/spectral/674b27b261c3c-overview)
 
 ```bash
 npx spectral lint src/main/resources/oas3.yaml --ruleset greetings.spectral.yml
+npx @stoplight/spectral-cli lint src/main/resources/oas3.yaml --ruleset greetings.spectral.yml
 ```
 
 ### CI (github actions)
@@ -47,6 +48,13 @@ brew install actionlint
 actionlint
 ```
 
+#### Checkov
+
+- docker file [policies](https://www.checkov.io/5.Policy%20Index/dockerfile.html)
+
 #### Finding commit sha (security hardening for actions)
 
 Usually, you want to pin to the commit SHA of a specific release. To find a release's commit SHA, go to the action's repository releases page (e.g. <https://github.com/actions/checkout/releases>). Find the release you want to use and click on the shorthand SHA (e.g. a12a394) listed in the summary section to the left of the release. You'll then be redirected to the release details page, which lists the full commit SHA you can use.
+
+docker run --tty --rm bridgecrew/checkov --directory /tf
+docker run --tty --rm bridgecrew/checkov --directory /test-infra
