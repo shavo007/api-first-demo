@@ -38,3 +38,4 @@ jobs:
         quiet: true # show only failed checks
         container_user: 1000 # UID to run the container under to prevent permission issues
         output_format: github_failed_only
+        skip_check: CKV_DOCKER_2,CKV_DOCKER_3
