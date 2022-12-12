@@ -29,6 +29,16 @@ jobs:
       with:
           spectral_ruleset: 'greetings.spectral.yml'
           file_glob: 'src/main/resources/oas3.yaml'
+    - name: Lint Dockerfile using Checkov
+      id: checkov
+      uses: bridgecrewio/checkov-action@v12.1810.0
+      with:
+        directory: .
+        framework: dockerfile # only ask for dockerfile scans
+        quiet: true # show only failed checks
+        container_user: 1000 # UID to run the container under to prevent permission issues
+        output_format: github_failed_only
+        skip_check: CKV_DOCKER_2,CKV_DOCKER_3
   docker_build_and_push:
     name: Docker Build and Push
     needs: build
@@ -68,7 +78,7 @@ jobs:
         uses: docker/build-push-action@v3
         with:
           context: .
-          platforms: linux/amd64,linux/arm64 # also support the new mac architecture (requires buildx)
+          platforms: linux/amd64 # also support the new mac architecture (requires buildx)
           # push: true
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta_dockerhub.outputs.tags }}
@@ -76,4 +86,4 @@ jobs:
           # use layer caching. Don't forget mode=max to also cache the build image
           # (vs only the final image - mode: min)
           cache-from: type=gha
-          cache-to: type=gha,mode=max        
+          cache-to: type=gha,mode=max
