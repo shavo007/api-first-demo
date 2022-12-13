@@ -2,7 +2,7 @@ FROM eclipse-temurin:17-jdk-jammy as builder
 
 WORKDIR /app
 COPY . /app
-RUN ./mvnw clean package
+RUN ./mvnw clean package -DskipTests
 
 FROM eclipse-temurin:17-jre-jammy
 VOLUME /tmp  
