@@ -31,7 +31,7 @@ jobs:
     steps:
       # See also: https://github.com/CodelyTV/pr-size-labeler/pull/26
       - name: Apply Size Label
-        uses: bflad/pr-size-labeler@54ef36785e9f4cb5ecf1949cfc9b00dbb621d761
+        uses: bflad/pr-size-labeler@v1.8.1
         # uses: bflad/pr-size-labeler@d56e9ca5fe93539a256a7e7b4efd971f4f19fe00
         with:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
