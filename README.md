@@ -11,7 +11,7 @@
 - Install [Docker](https://docs.docker.com/desktop/install/mac-install/)
 
 ```bash
-sdk install java
+sdk install java #how to choose which jdk https://whichjdk.com/#tldr
 sdk list java #list java versions
 sdk current java
 "java.jdt.ls.java.home": "/Users/<username>/.sdkman/candidates/java/17.0.4.1-tem" #VSCode settings
