@@ -57,5 +57,22 @@ actionlint
 
 Usually, you want to pin to the commit SHA of a specific release. To find a release's commit SHA, go to the action's repository releases page (e.g. <https://github.com/actions/checkout/releases>). Find the release you want to use and click on the shorthand SHA (e.g. a12a394) listed in the summary section to the left of the release. You'll then be redirected to the release details page, which lists the full commit SHA you can use.
 
+## Docker best practices
+
+<https://aws.github.io/aws-eks-best-practices/security/docs/image/#recommendations>
+
+### Non root user
+
+```bash
+docker run -it --rm -v "$PWD/Dockerfile":/Dockerfile:ro redcoolbeans/dockerlint #lint dockerfile
+docker build -t shanelee007/api-first-demo . #build docker image
+docker run -d -p8080:8080 shanelee007/api-first-demo #run image locally on 8080
+```
+
+```bash
+2023-02-16T10:22:06.820Z INFO 1 --- [ main] c.e.greetings.GreetingsApplication : Starting GreetingsApplication v0.0.1-SNAPSHOT using Java 17.0.6 with PID 1 (/app/server.jar started by appuser in /app)
+#The first log line mentions now that the application is started by appuser and not root.
+```
+
 docker run --tty --rm bridgecrew/checkov --directory /tf
 docker run --tty --rm bridgecrew/checkov --directory /test-infra
