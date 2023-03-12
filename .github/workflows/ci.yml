@@ -31,7 +31,7 @@ jobs:
           file_glob: 'src/main/resources/oas3.yaml'
     - name: Lint Dockerfile using Checkov
       id: checkov
-      uses: bridgecrewio/checkov-action@v12.2128.0
+      uses: bridgecrewio/checkov-action@v12.2191.0
       with:
         directory: .
         framework: dockerfile # only ask for dockerfile scans
