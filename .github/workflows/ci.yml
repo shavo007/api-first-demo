@@ -25,7 +25,7 @@ jobs:
     - name: Build with Maven
       run: mvn -B package --file pom.xml
     - name: Lint API spec  
-      uses: stoplightio/spectral-action@v0.8.8
+      uses: stoplightio/spectral-action@v0.8.10
       with:
           spectral_ruleset: 'greetings.spectral.yml'
           file_glob: 'src/main/resources/oas3.yaml'
