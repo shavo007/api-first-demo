@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Run tfsec with reviewdog output on the PR
-        uses: reviewdog/action-tfsec@c33e075b53fed70183e46124801ff934b5c5ff8b #v1.15.2
+        uses: reviewdog/action-tfsec@38d35bd1e16424ddafe797758dadb4917defc66d #v1.15.3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           working_directory: test-infra # Change working directory
