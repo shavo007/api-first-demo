@@ -1,10 +1,10 @@
-FROM eclipse-temurin:17-jdk-jammy as builder
+FROM eclipse-temurin:20-jdk-jammy as builder
 
 WORKDIR /app
 COPY . /app
 RUN ./mvnw clean package -DskipTests
 
-FROM eclipse-temurin:17-jre-jammy
+FROM eclipse-temurin:20-jre-jammy
 ARG USERNAME=appuser
 ARG USER_UID=1000
 ARG USER_GID=$USER_UID
